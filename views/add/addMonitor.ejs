@@ -1,0 +1,39 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/menu.ejs') %>
+    <div class="addNewPC">
+        <form action="/addItem/Monitor" method="post">
+            <input type="text" placeholder="Title" name="title">
+            <input type="text" placeholder="image Link" name="imageLink">
+            <input type="text" placeholder="Description" name="description">
+            <input type="number" placeholder="Price" name="price">
+            <input type="text" placeholder="link" name="link">
+            <input type="text" placeholder="Resolution" name="resolution">
+            <input type="text" placeholder="Refresh Rate" name="refreshRate">
+            <input type="text" placeholder="Size" name="size">
+            <input type="text" placeholder="Panel Type" name="panelType">
+            <label>
+                <input type="radio" name="HDR" value="1">
+                <span>Has HDR</span>
+                <input type="radio" name="HDR" value="0">
+                <span>Doesn't have HDR</span>
+            </label>
+            <input type="text" placeholder="Aspect Ratio" name="aspectRation">
+            <label>
+                <input type="radio" name="freeSync" value="1">
+                <span>Has Free Sync</span>
+                <input type="radio" name="freeSync" value="0">
+                <span>Doesn't have Free Sync</span>
+            </label>
+            <label>
+                <input type="radio" name="curved" value="1">
+                <span>Is Curved</span>
+                <input type="radio" name="curved" value="0">
+                <span>Is not Curved</span>
+            </label>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

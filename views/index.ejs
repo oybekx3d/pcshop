@@ -1,0 +1,124 @@
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/menu.ejs") %>
+        <main class="index">
+
+
+
+
+
+
+
+
+
+            <div class="header">
+                <div>
+                    <h1>Get the Best Computer for your Money</h1>
+                    <p>Get the Best Possible Computer, Peripherals & Accessories for your Money. Discover top Deals on 
+                        the internet and learn How to buy, use and sell your PC the right way.</p>
+                    <a href="#Discover"><button>Discover</button></a>
+                </div>
+                <img src="imgs/perm_files/mmtitleimg.webp" alt="">
+            </div>
+            <div class="mainMenuListings">
+
+                <article class="currentEvent">
+                    <img src="/imgs/perm_files/mmtitleimg.webp" alt="">
+                    <section>
+                        <h2>Gaming PC giveaway</h2>
+                        <p>To celebrate our websites launch, We are giving away a Gaming PC that packs <span>Ryzen 9 7950X3D</span> and <span>RTX 4090</span>. To Participate Click the Button below</p>
+                        <a href=""><button>Participate</button></a>
+                        <aside><p>More information about the PC and the giveaway is <a href="">Here</a></p></aside>
+                    </section>
+                </article>
+
+                <section id="Discover">
+                    <h2>Gaming PCs</h2>
+
+                    <% gamingComputers.forEach(gamingComputer => { %>
+                        <div class="computerContainer">
+                            <img src="<%= gamingComputer.imageLink %>" alt="">
+                            <h3><%= gamingComputer.title %></h3>
+                            <p><%= gamingComputer.shortDescription %></p>
+                            <ul>
+                                <li>CPU: <%= gamingComputer.cpu %></li>
+                                <li>GPU: <%= gamingComputer.gpu1 %></li>
+                                <li>RAM: <%= gamingComputer.ram %> GB</li>
+                            </ul>
+                            <data value="<%= gamingComputer.price %>"><%= gamingComputer.price %></data>
+                            <a href="/pc/<%= gamingComputer._id %>"><button>Learn More</button></a>
+                        </div>
+                    <% }); %>
+                </section>
+
+
+
+                <section>
+                    <h2>Productivity PCs</h2>
+
+                        <% productivityComputers.forEach(productivityComputer => { %>
+                            <div class="computerContainer">
+                                <img src="<%= productivityComputer.imageLink %>" alt="">
+                                <h3><%= productivityComputer.title %></h3>
+                                <p><%= productivityComputer.shortDescription %></p>
+                                <ul>
+                                    <li>CPU: <%= productivityComputer.cpu %></li>
+                                    <li>GPU: <%= productivityComputer.gpu1 %></li>
+                                    <li>RAM: <%= productivityComputer.ram %> GB</li>
+                                </ul>
+                                <data value="<%= productivityComputer.price %>"><%= productivityComputer.price %></data>
+                                <a href="/pc/<%= productivityComputer._id %>"><button>Learn More</button></a>
+                            </div>
+                        <% }); %>
+
+                </section>
+
+
+                <section>
+                    <h2>Home Use PCs</h2>
+
+                    <% homeComputers.forEach(homeComputer => { %>
+                        <div class="computerContainer">
+                            <img src="<%= homeComputer.imageLink %>" alt="">
+                            <h3><%= homeComputer.title %></h3>
+                            <p><%= homeComputer.shortDescription %> </p>
+                            <ul>
+                                <li>CPU: <%= homeComputer.cpu %></li>
+                                <li>GPU: <%= homeComputer.gpu1 %></li>
+                                <li>RAM: <%= homeComputer.ram %> GB</li>
+                            </ul>
+                            <data value="<%= homeComputer.price %>"><%= homeComputer.price %></data>
+                            <a href="/pc/<%= homeComputer._id %>"><button>Learn More</button></a>
+                        </div>
+                    <% }); %>
+
+                </section>
+
+
+                <section>
+                    <h2>PC Drops</h2>
+
+                    <% quickDropComputers.forEach(quickDropComputer => { %>
+                        <div class="computerContainer">
+                            <img src="<%= quickDropComputer.imageLink %>" alt="">
+                            <h3><%= quickDropComputer.title %></h3>
+                            <p><%= quickDropComputer.shortDescription %></p>
+                            <ul>
+                                <li>CPU: <%= quickDropComputer.cpu %></li>
+                                <li>GPU: <%= quickDropComputer.gpu1 %></li>
+                                <li>RAM: <%= quickDropComputer.ram %> GB</li>
+                            </ul>
+                            <data value="<%= quickDropComputer.price %>"><%= quickDropComputer.price %></data>
+                            <a href="/pc/<%= quickDropComputer._id %>"><button>Learn More</button></a>
+                        </div>
+                    <% }); %>
+
+                </section>
+
+
+            </div>
+        </main>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

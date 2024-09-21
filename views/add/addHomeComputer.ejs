@@ -1,0 +1,86 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/menu.ejs') %>
+    <div class="addNewPC">
+        <form action="/addItem/HomeComputer" method="post">
+            <input type="text" placeholder="Title" name="title">
+            <input type="text" placeholder="imageLink" name="imageLink">
+            <input type="text" placeholder="description" name="description">
+            <input type="text" placeholder="Short Description" name="shortDescription">
+            <input type="number" placeholder="price" name="price">
+            <label>
+                <input type="radio" name="bluetooth" value="1">
+                <span>Has Bluetooth</span>
+                <input type="radio" name="bluetooth" value="0">
+                <span>No Bluetooth</span>
+            </label>
+            <label>
+                <input type="radio" name="wifi" value="1">
+                <span>Has Wifi</span>
+                <input type="radio" name="wifi" value="0">
+                <span>No Wifi</span>
+            </label>
+            <label>
+                <input type="radio" name="rgb" value="1">
+                <span>Has RGB</span>
+                <input type="radio" name="rgb" value="0">
+                <span>No RGB</span>
+            </label>
+            <input type="text" placeholder="colorTheme" name="colorTheme">
+            <input type="text" placeholder="case" name="case">
+            <input type="text" placeholder="caseLink" name="caseLink">
+            <input type="text" placeholder="caseType" name="caseType">
+            <input type="text" placeholder="preInstalledFans" name="preInstalledFans">
+
+            <input type="text" placeholder="cpu" name="cpu">
+            <input type="text" placeholder="cpuLink" name="cpuLink">
+            <input type="number" placeholder="cpuCoreCount" name="cpuCoreCount">
+            <input type="text" placeholder="cpuBrand" name="cpuBrand">
+            <label>
+                <input type="radio" name="iGPU" value="1">
+                <span>Has iGPU</span>
+                <input type="radio" name="iGPU" value="0">
+                <span>NO iGPU</span>
+            </label>
+
+            <input type="text" placeholder="cpuCooler" name="cpuCooler">
+            <input type="text" placeholder="cpuCoolerLink" name="cpuCoolerLink">
+            <input type="text" placeholder="cpuCoolerType" name="cpuCoolerType">
+            <input type="number" placeholder="cpuCoolerLength" name="cpuCoolerLength">
+
+            <input type="text" placeholder="motherboard" name="motherboard">
+            <input type="text" placeholder="motherboardLink" name="motherboardLink">
+            <input type="text" placeholder="motherboardSize" name="motherboardSize">
+            <input type="text" placeholder="motherboardChipset" name="motherboardChipset">
+
+            <input type="text" placeholder="ram" name="ram">
+            <input type="text" placeholder="ramLink" name="ramLink">
+            <input type="number" placeholder="ramSpeed" name="ramSpeed">
+            <input type="number" placeholder="ramCapacity" name="ramCapacity">
+            <input type="number" placeholder="ramRepeatHowMany" name="ramRepeatHowMany">
+
+            <input type="text" placeholder="ssd1" name="ssd1">
+            <input type="text" placeholder="ssd1Link" name="ssd1Link">
+            <input type="text" placeholder="ssd2" name="ssd2">
+            <input type="text" placeholder="ssd2Link" name="ssd2Link">
+            <input type="text" placeholder="ssd3" name="ssd3">
+            <input type="text" placeholder="ssd3Link" name="ssd3Link">
+            <input type="number" placeholder="ssdTotalCapacity" name="ssdCapacity">
+
+            <input type="text" placeholder="gpu1" name="gpu">
+            <input type="text" placeholder="gpu1Link" name="gpuLink">
+            <input type="number" placeholder="gpu1VramCapacity" name="gpuVramCapacity">
+            <input type="text" placeholder="gpu1Brand" name="gpuBrand">
+
+            <input type="text" placeholder="psu" name="powerSupply">
+            <input type="text" placeholder="psuLink" name="powerSupplyLink">
+            <input type="number" placeholder="psuWattage" name="powerSupplyWatts">
+            <input type="text" placeholder="psuEfficiency" name="powerSupplyEfficiency">
+            <input type="text" placeholder="psuTier" name="powerSupplyTier">
+            
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

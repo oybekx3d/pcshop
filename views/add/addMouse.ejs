@@ -1,0 +1,25 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/menu.ejs') %>
+    <div class="addNewPC">
+        <form action="/addItem/Mouse" method="post">
+            <input type="text" placeholder="Title" name="title">
+            <input type="text" placeholder="imageLink" name="imageLink">
+            <input type="text" placeholder="description" name="description">
+            <input type="number" placeholder="price" name="price">
+            <input type="text" placeholder="link" name="link">
+            <input type="text" placeholder="color" name="color">
+            <label>
+                <input type="radio" name="hasRGB" value="1">
+                <span>Has RGB</span>
+                <input type="radio" name="hasRGB" value="0">
+                <span>NO RGB</span>
+            </label>
+            <input type="text" placeholder="connectionType" name="connectionType">
+            <input type="number" placeholder="buttonCount" name="buttonCount">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

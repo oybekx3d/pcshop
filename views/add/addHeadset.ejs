@@ -1,0 +1,36 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/menu.ejs') %>
+    <div class="addNewPC">
+        <form action="/addItem/Headset" method="post">
+            <input type="text" placeholder="Title" name="title">
+            <input type="text" placeholder="link" name="link">
+            <input type="text" placeholder="Description" name="description">
+            <input type="number" placeholder="Price" name="price">
+            <input type="text" placeholder="image Link" name="imageLink">
+            <input type="text" placeholder="Connection Type" name="connectionType">
+            <input type="text"placeholder="Color" name="color">
+            <label>
+                <input type="radio" name="hasRGB" value="1">
+                <span>Has RGB</span>
+                <input type="radio" name="hasRGB" value="0">
+                <span>Doesn't have RGB</span>
+            </label>
+            <label>
+                <input type="radio" name="hasMicrophone" value="1">
+                <span>Has Microphone</span>
+                <input type="radio" name="hasMicrophone" value="0">
+                <span>Doesn't have Microphone</span>
+            </label>
+            <label>
+                <input type="radio" name="hasNoiseCancellation" value="1">
+                <span>Has Noise Cancellation</span>
+                <input type="radio" name="hasNoiseCancellation" value="0">
+                <span>Doesn't have Noise Cancellation</span>
+            </label>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

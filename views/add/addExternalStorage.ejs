@@ -1,0 +1,26 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/menu.ejs') %>
+    <div class="addNewPC">
+        <form action="addItem/ExternalStorage" method="post">
+            <input type="text" placeholder="Title" name="title">
+            <input type="text" placeholder="image Link" name="imageLink">
+            <input type="text" placeholder="Description" name="description">
+            <input type="number" placeholder="Price" name="price">
+            <input type="text" placeholder="link" name="link">
+            <input type="text" placeholder="capacity" name="capacity">
+            <input type="text" placeholder="speed" name="speed">
+            <input type="text" placeholder="formFactor" name="formFactor">
+            <label>
+                <input type="radio" name="isNVMe" value="1">
+                <span>Is NVMe</span>
+                <input type="radio" name="isNVMe" value="0">
+                <span>Is not NVMe</span>
+            </label>
+            <input type="text" placeholder="cableInterface" name="cableInterface">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

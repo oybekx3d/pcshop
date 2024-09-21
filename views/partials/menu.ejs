@@ -1,0 +1,130 @@
+<html lang="en">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    if(this.classList.contains('active')){
+                        this.classList.remove('active');
+                    } else {
+                        menuItems.forEach(item => item.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+
+    </script>
+<nav class="menu">
+    <div>
+        <li class="menu-item"><a href="/"><img src="../imgs/icons/home.svg">Home</a></li>
+        <li class="menu-item"><a><img src="../imgs/icons/pc.svg">Computers</a>
+            <ul class="submenu">
+                <li class="submenu-item"><a href="/pcs/gaming"><img src="../imgs/icons/home.svg">Gaming</a></li>
+                <li class="submenu-item"><a href="/pcs/productivity"><img src="../imgs/icons/home.svg">Productivity</a></li>
+                <li class="submenu-item"><a href="/pcs/homeuse"><img src="../imgs/icons/home.svg">Budget/Home use</a></li>
+                <li class="submenu-item"><a href="/pcs/drops"><img src="../imgs/icons/home.svg">Quick drops</a></li>
+            </ul>
+        </li>
+        <li class="menu-item"><a><img src="../imgs/icons/monitor.svg">Accessories</a>
+            <ul class="submenu">
+                <li class="submenu-item"><a href="/accs/monitors"><img src="../imgs/icons/home.svg">Monitors</a></li>
+                <li class="submenu-item"><a href="/accs/keyboards"><img src="../imgs/icons/home.svg">Keyboards</a></li>
+                <li class="submenu-item"><a href="/accs/mice"><img src="../imgs/icons/home.svg">Mice</a></li>
+                <li class="submenu-item"><a href="/accs/headsets"><img src="../imgs/icons/home.svg">Headsets</a></li>
+                <li class="submenu-item"><a href="/accs/storage"><img src="../imgs/icons/home.svg">Storage</a></li>
+                <li class="submenu-item"><a href="/accs/cool"><img src="../imgs/icons/home.svg">Cool Accessories</a></li>
+            </ul>
+        </li>
+        <li class="menu-item"><a href="/deals"><img src="../imgs/icons/deals.svg">Deals</a></li>
+        <li class="menu-item"><a onclick="$('.popUpSocials').css('display', 'flex')"><img src="../imgs/icons/freehelp.svg">Free Help</a></li>
+        <li class="menu-item"><a href="/cheatsheets"><img src="../imgs/icons/important.svg">Cheatsheets</a></li>
+        <li class="menu-item"><a href="/blog"><img src="../imgs/icons/blog.svg">Blog</a></li>
+        <li class="menu-item"><a href="/tutorials"><img src="../imgs/icons/tutorials.svg">Tutorials</a></li>
+        <li class="menu-item"><a onclick="$('.popUpSocials').css('display', 'flex')"><img src="../imgs/icons/community.svg">Community</a></li>
+        <li class="menu-item"><a href="/about"><img src="../imgs/icons/about.svg">About</a></li></div>
+    <div>
+        <li class="menu-item"><a href="/settings"><img src="../imgs/icons/settings.svg">Settings</a></li>
+        <li class="menu-item"><a href="/admin"><img src="../imgs/icons/admin.svg">Log In</a></li>
+    </div>
+</nav>
+
+
+<div class="popUpSocials">
+    <button onclick="$('.popUpSocials').hide()">X</button>
+    <img src="/imgs/icons/empty_logo.svg" alt="">
+    <h2>Brand Name</h2>
+    <p>Write something that is kind of cool but also funny at the same time, nah write some dad jokes instead.</p>
+   
+
+
+    <section>
+        <section>
+            <h3>Socials</h3>
+            <section>
+                <a href="">
+                    <img src="/imgs/icons/youtube.svg" alt="">
+                    <div>
+                        <h4>Youtube</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat optio ex consequatur.</p>
+                    </div>
+                    <p class="arrow">&#8594;</p>
+                </a>
+                <a href="">
+                    <img src="/imgs/icons/instagram.svg" alt="">
+                    <div>
+                        <h4>Instagram</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat optio ex consequatur.</p>
+                    </div>
+                    <p class="arrow">&#8594;</p>
+                </a>
+                <a href="">
+                    <img src="/imgs/icons/discord.svg" alt="">
+                    <div>
+                        <h4>Discord</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat optio ex consequatur.</p>
+                    </div>
+                    <p class="arrow">&#8594;</p>
+                </a>
+            </section>
+        </section>
+        <section>
+            <h3>Business related</h3>
+            <section>
+                <a href="">
+                    <img src="/imgs/icons/email.svg" alt="">
+                    <div>
+                        <h4>Email</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat optio ex consequatur.</p>
+                    </div>
+                    <p class="arrow">&#8594;</p>
+                </a>
+            </section>
+            <section>
+                <a href="">
+                    <img src="/imgs/icons/telegram.svg" alt="">
+                    <div>
+                        <h4>Telegram</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat optio ex consequatur.</p>
+                    </div>
+                    <p class="arrow">&#8594;</p>
+                </a>
+            </section>
+            <section>
+                <a href="">
+                    <img src="/imgs/icons/discord.svg" alt="">
+                    <div>
+                        <h4>Discord</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat optio ex consequatur.</p>
+                    </div>
+                    <p class="arrow">&#8594;</p>
+                </a>
+            </section>
+        </section>
+
+
+
+        
+    </section>
+    <!-- Made By us if I launch another poject -->
+</div>

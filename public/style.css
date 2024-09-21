@@ -1,0 +1,1079 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    --bgColor: #272727;
+    --textColor: #fff;
+    --accent: #5562F6;
+    --transitionShort: .2s;
+    --transitionMedium: .4s;
+    --warningColor: #ff0000;
+    background-color: var(--bgColor);
+    margin: 0;
+    margin-left: 2.2vw;
+    font-family: "Quantico", sans-serif;
+}
+::-webkit-scrollbar {
+    display: none;
+}input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Menu */
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.menu{
+    display: flex;
+    animation: fadeInLeft 1s ease-out;
+    flex-direction: column;
+    width: 2.1vw;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(145deg, rgba(85,98,246,1) 0%, rgba(106,188,225,1) 100%);
+    transition: all var(--transitionMedium);
+    color: var(--textColor);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    &:hover{
+        width: 9vw;
+    }
+    z-index: 123456789;
+}
+.menu *{
+    text-wrap: nowrap;
+}
+.menu div:last-of-type{
+    margin-top: auto;
+}
+.menu a{
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+    width: auto;
+    height: max-content;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--textColor);
+    &:hover{
+        font-weight: 600;
+    }
+}
+.menu * img{
+    width: 1.5vw;
+    height: 1.5vw;
+}
+.menu-item{
+    padding: .3vw;
+    cursor: pointer;
+}
+.submenu{
+    display: none;
+    list-style-type: none;
+    padding-left: .6vw;
+}
+.submenu-item{
+    padding: .3vw;
+    cursor: pointer;
+}
+.submenu-item:first-child, .submenu-item:last-child{
+    padding: 0 .3vw;
+}
+.menu:hover .menu-item.active .submenu {
+    display: block;
+}
+
+/* PopUps */
+
+.popUpSocials{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 1vw;
+    width: 25vw;
+    height: 90vh;
+    overflow: scroll;
+    background: radial-gradient(circle at 100% 100%, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 0% 0%/7px 7px no-repeat,
+                radial-gradient(circle at 0 100%, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 100% 0%/7px 7px no-repeat,
+                radial-gradient(circle at 100% 0, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 0% 100%/7px 7px no-repeat,
+                radial-gradient(circle at 0 0, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 100% 100%/7px 7px no-repeat,
+                linear-gradient(var(--bgColor), var(--bgColor)) 50% 50%/calc(100% - 8px) calc(100% - 14px) no-repeat,
+                linear-gradient(var(--bgColor), var(--bgColor)) 50% 50%/calc(100% - 14px) calc(100% - 8px) no-repeat,
+                linear-gradient(135deg, rgba(85,98,246,1) 0%, rgba(106,188,225,1) 100%);
+    border-radius: .1vw;
+    box-sizing: content-box;
+    z-index: 99999;
+    color: var(--textColor);
+    & button{
+        position: absolute;
+        top: 1vw;
+        color: var(--textColor);
+        right: 1vw;
+        padding: .5vw;
+        background-color: transparent;
+        border: var(--warningColor) .1vw solid;
+        font-size: 1.2vw;
+        border-radius: .2vw;
+        &:hover{
+            cursor: pointer;
+            background-color: var(--warningColor);
+        }
+    }
+    & h2{
+        text-align: center;
+        font-size: 1.5vw;
+        margin: 0;
+    }
+    & img{
+        margin-top: 5vh;
+        width: 20%;
+    }
+    & p{
+        text-align: center;
+        font-size: .8vw;
+        margin: 0 10%;
+        margin-bottom: 2vh;
+        font-weight: 100;
+    }
+    & h3{
+        text-align: center;
+        font-size: 1.5vw;
+        margin: 0;
+    }
+    & section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        & a{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1vw;
+            text-decoration: none;
+            font-size: .8vw;
+            color: var(--textColor);
+            width: 80%;
+            margin: .5vh 0;
+            padding: 1vw;
+            border: var(--textColor) .1vw solid;
+            border-radius: .2vw;
+            &:hover{
+                border: var(--accent) .1vw solid;
+            }
+        }
+        & img{
+            width: 6vh;
+            margin: auto;
+        }
+        & h4{
+            font-size: 1vw;
+            margin: 0;
+        }
+        & p{
+            text-align: start;
+            font-size: .6vw;
+            margin: 0;
+        }
+        & .arrow{
+            font-size: 1.2vw;
+            margin: 0;
+            margin-right: .5vw;
+        }
+        & :hover .arrow{
+            color: var(--accent);
+            margin-right: 0;
+            margin-left: .5vw;
+        }
+    }
+}
+
+
+
+
+
+
+/* Index */
+.index *{
+    color: var(--textColor);
+    transition: all var(--transitionShort);
+}
+.index .header{
+    margin-top: 4vh;
+    margin-left: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: start;
+    overflow: hidden;
+}
+.index .header div{
+    display: flex;
+    flex-basis: 1;
+    flex-direction: column;
+}
+.index .header p{
+    width: 35vw;
+    font-size: 1.3vw;
+}
+.index .header h1{
+    text-align: start;
+    width: 50vw;
+    font-size: 4.5vw;
+}
+.index .header div button{
+    background-color: var(--accent);
+    border: none;
+    color: var(--textColor);
+    padding: .5vw 1vw;
+    font-size: 2vw;
+    width: max-content;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.index .header div button::after{
+    content: "→";
+    transition: all var(--transitionMedium);
+    margin-left: .5vw;
+}
+.index .header div button:hover::after{
+    margin-left: 1.3vw;
+}   
+.index .header div a{
+    width: min-content;
+}
+.index .header img{
+    margin-top: 15vh;
+    padding-bottom: 10vh;
+    width: auto;
+    scale: 2;
+    transform: translateX(10vw);
+    overflow: hidden;
+    mask-image: radial-gradient(
+        circle, 
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.8) 60%, 
+        rgba(0, 0, 0, 0) 70%
+    );
+}
+
+
+.index .mainMenuListings section:not(.currentEvent section){
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw;
+    margin: 3vh 10vw;
+    & h2:not(.currentEvent h2){
+        text-align: center;
+        grid-column: span 4;
+        margin-top: 4vh;
+        font-size: 3vw;
+    }
+}
+
+
+.currentEvent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5vw;
+    padding: 1vw;
+    background: radial-gradient(circle at 100% 100%, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 0% 0%/7px 7px no-repeat,
+    radial-gradient(circle at 0 100%, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 100% 0%/7px 7px no-repeat,
+    radial-gradient(circle at 100% 0, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 0% 100%/7px 7px no-repeat,
+    radial-gradient(circle at 0 0, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 100% 100%/7px 7px no-repeat,
+    linear-gradient(var(--bgColor), var(--bgColor)) 50% 50%/calc(100% - 8px) calc(100% - 14px) no-repeat,
+    linear-gradient(var(--bgColor), var(--bgColor)) 50% 50%/calc(100% - 14px) calc(100% - 8px) no-repeat,
+    linear-gradient(135deg, rgba(85,98,246,1) 0%, rgba(106,188,225,1) 100%);
+    border-radius: .1vw;
+    box-sizing: content-box;
+    margin: 3vh 10vw;
+    color: var(--textColor);
+}
+.currentEvent img{
+    width: 100%;
+    object-fit: cover;
+}
+.currentEvent * h2{
+    font-weight: 800;
+    font-size: 3vw;
+    margin: 3vh 0;
+}
+.currentEvent * p{
+    font-size: 1.2vw;
+}
+.currentEvent * aside p{
+    font-size: 1vw;
+    margin: 0;
+}
+.currentEvent * a{
+    color: var(--accent);
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(-3deg);
+    }
+    50%{
+        transform: rotate(3deg);
+    }
+}
+.currentEvent button{
+    background-color: var(--accent);
+    border: none;
+    color: var(--textColor);
+    padding: .5vw 1vw;
+    font-size: 1.5vw;
+    width: max-content;
+    margin-bottom: 2vh;
+    &:hover{
+        cursor: pointer;
+        scale: 1.1;
+        animation: rotate .3s ease-in-out 3;
+    }
+}
+.currentEvent span:first-of-type{
+    color: red;
+}
+.currentEvent span:last-of-type{
+    color: lime;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.computerContainer{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: .5vw;
+    padding: 1vw;
+    background: radial-gradient(circle at 100% 100%, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 0% 0%/7px 7px no-repeat,
+    radial-gradient(circle at 0 100%, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 100% 0%/7px 7px no-repeat,
+    radial-gradient(circle at 100% 0, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 0% 100%/7px 7px no-repeat,
+    radial-gradient(circle at 0 0, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 100% 100%/7px 7px no-repeat,
+    linear-gradient(var(--bgColor), var(--bgColor)) 50% 50%/calc(100% - 8px) calc(100% - 14px) no-repeat,
+    linear-gradient(var(--bgColor), var(--bgColor)) 50% 50%/calc(100% - 14px) calc(100% - 8px) no-repeat,
+    linear-gradient(135deg, rgba(85,98,246,1) 0%, rgba(106,188,225,1) 100%);
+    border-radius: .1vw;
+    box-sizing: content-box;
+    & img{
+        width: 90%;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        object-position: center;
+        & :hover{
+            scale: 1.1;
+        }
+    }
+    & h3{ 
+        font-size: 2vw;
+        margin: 0;
+    }
+    & p{
+        font-size: 1vw;
+        margin: 0;
+    }
+    & data{
+        font-size: 1.2vw; 
+        &:before{
+            content: "$";
+        }
+    }
+    & button{
+        text-wrap: nowrap;
+        background-color: var(--accent);
+        border: none;
+        color: var(--textColor);
+        padding: .5vw 1vw;
+        font-size: 1.5vw;
+        &:hover{
+            cursor: pointer;
+            scale: 1.06;
+        }
+    }
+    & ul{
+        border-top: var(--accent) .2vw solid;
+        border-bottom: var(--accent) .2vw solid;
+        font-size: .8vw;
+        width: 80%;
+        list-style: none;
+        text-align: start;
+        padding: 1vh 0;
+    }
+}
+
+h1{
+    text-align: center;
+    font-size: 5vw;
+    margin-top: 4vh;
+    color: var(--textColor);
+}
+
+
+
+
+.computerListing{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw;
+    margin: 3vh 10vw;
+    color: var(--textColor);
+}
+
+
+
+.addNewPC form{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1vw;
+    margin-top: 2vw;
+    flex-wrap: wrap;
+    &>div{
+        display: flex;
+        flex-direction: column;
+        gap: .5vw;
+    }
+}
+.addNewPC form input{
+    width: auto;
+    font-size: 1vw;
+    background-color: var(--bgColor);
+    border: 1px solid var(--textColor);
+    color: var(--textColor);
+    padding: .35vw;
+}
+.addNewPC form button{
+    background-color: var(--accent);
+    border: none;
+    color: var(--textColor);
+    padding: .5vw 1vw;
+    font-size: 1.5vw;
+    width: max-content;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.addNewPC form hr{
+    width: 100%;
+    margin: 1.78vh 0;
+    height: .1vw;
+    background-color: var(--textColor);
+    border: none;
+}
+.addNewPC form label{
+    display: grid;
+    gap: .5vw;
+    grid-template-columns: auto auto;
+    font-size: 1vw;
+    color: var(--textColor);
+    border: var(--accent) .1vw solid;
+    padding: .5vw;
+}
+
+
+/* Admin */
+.admin{
+    margin: 5vh 10vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw;
+}
+.admin a{
+    font-size: 1vw;
+    text-decoration: none;
+    color: var(--textColor);
+    width: 100%;
+    padding: 10vh 0;
+    border: var(--textColor) .1vw solid;
+    text-align: center;
+    font-size: 1.5vw;
+    transition: all var(--transitionShort);
+    &:hover{
+        scale: 1.05;
+    }
+}
+
+
+
+
+
+
+
+
+.about{
+    margin: 5vh 5vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    color: var(--textColor);
+    font-size: 1.5vw;
+    & h1{
+        text-align: start;
+        margin: 1vh 0;
+    }
+    & p{
+        text-align: start;
+        margin: 1vh 0;
+        font-size: 1vw;
+    }
+    & .aboutContainer{
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+    }
+    & .aboutButtons{
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        height: min-content;
+        background: radial-gradient(circle at 100% 100%, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 0 100%, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 100% 0, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
+            radial-gradient(circle at 0 0, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
+            linear-gradient(var(--bgColor), var(--bgColor)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
+            linear-gradient(var(--bgColor), var(--bgColor)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
+            linear-gradient(0deg, #5562f6 0%, rgba(85,98,246,0.5) 15%, rgba(85,98,246,0) 30%, rgba(85,98,246,0) 70%, rgba(85,98,246,0.5) 85%, #5562f6 100%);
+        border-radius: 8px;
+        padding: .3vw;
+        box-sizing: border-box;
+        & button{
+            width: 100%;
+            font-size: 1vw;
+            text-align: start;
+            color: var(--textColor);
+            font-size: 1.2vw;
+            padding: .3vw;
+            border: none;
+            background-color: var(--bgColor);
+            &:hover{
+                background-color: var(--accent);
+                cursor: pointer;
+            }
+        }
+    }
+    & .aboutArticles{
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        width: 85%;
+    }
+    & .aboutArticle{
+        display: none;
+    }
+}
+
+
+.about #article-1{
+    grid-template-columns: auto auto auto auto;
+    gap: 1vw;
+    & img{
+        width: 100%;
+    }
+    & h2{
+        text-align: center;
+        font-size: 1.5vw;
+    }
+    & p{
+        text-align: center;
+        font-size: 1.2vw;
+    }
+}
+.about #article-2{
+    display: flex;
+    flex-direction: column;
+    & h2{
+        margin: 1vh 0;
+        text-indent: 5%;
+    }
+    & p{
+        margin: 1vh 0;
+        font-size: 1.2vw;
+        text-indent: 5%;
+    }
+}
+
+.about #article-4{
+    display: flex;
+    & ul{
+        list-style: none;
+    }
+    & li:nth-child(even){
+        text-indent: 2vw;
+        margin-left: 2vw;
+        margin-bottom: 2vh;
+    }
+    & li:nth-child(odd){
+        font-size: 2vw;
+        margin-bottom: 1vh;
+        font-weight: 1000;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.tutorials *{
+    transition: all var(--transitionShort);
+}
+.tutorials .mainPageMenu{
+    display: grid;
+    margin: 3vh 7vw;
+    grid-template-columns: 1fr 1fr;
+    color: var(--textColor);
+    & section{
+        flex-basis: 1;
+    }
+    & h1{
+        text-align: start;
+        font-size: 5vw;
+        margin: 0;
+        margin-top: 15vh;
+    }
+    & p{
+        font-size: 1.5vw;
+    }
+    & button{
+    background: radial-gradient(circle at 100% 100%, transparent 0, transparent 3px, transparent 3px) 0% 0%/7px 7px no-repeat,
+            radial-gradient(circle at 0 100%, transparent 0, transparent 3px, transparent 3px) 100% 0%/7px 7px no-repeat,
+            radial-gradient(circle at 100% 0, transparent 0, transparent 3px, transparent 3px) 0% 100%/7px 7px no-repeat,
+            radial-gradient(circle at 0 0, transparent 0, transparent 3px, transparent 3px) 100% 100%/7px 7px no-repeat,
+            linear-gradient(transparent, transparent) 50% 50%/calc(100% - 8px) calc(100% - 14px) no-repeat,
+            linear-gradient(transparent, transparent) 50% 50%/calc(100% - 14px) calc(100% - 8px) no-repeat,
+            linear-gradient(135deg, rgba(85,98,246,1) 0%, rgba(106,188,225,1) 100%);
+    border-radius: .2vw;
+    border: none;
+    box-sizing: content-box;
+    font-size: 1.7vw;
+    margin: 0;
+    padding: .3vw 1vw;
+    color: var(--textColor);
+    vertical-align: bottom;
+    &:hover{
+        cursor: pointer;
+        scale: 1.06;
+        animation: rotate .3s linear 3;
+        animation-delay: 200ms;
+    };
+    }
+    & div{
+        display: flex;
+        align-items: center;
+        gap: .5vw;
+        padding: .4vw;
+        background-color: var(--textColor);
+        width: min-content;
+        border-radius: .2vw;
+    };
+    & input{
+        vertical-align: bottom;
+        font-size: 1.5vw;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        padding: .4vw;
+        color: var(--bgColor);
+    }
+    & img{
+        animation: zoomIn 1s ease-in-out;
+        flex-basis: 1;
+    }
+}
+
+
+
+
+
+
+
+.tutorials .tutorialsList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 3vh 7vw;
+    gap: 1vw;
+    row-gap: 5vh;
+    padding: 1vw;
+    color: var(--textColor);
+    & .tutSmall{
+        display: flex;
+        flex-direction: column;
+        padding: .4vw;
+        border: transparent .1vw solid;
+        &:hover{
+            border: var(--accent) .1vw solid;
+        }
+        & img{
+            width: 100%;
+            object-fit: contain;
+            box-sizing: border-box;
+        }
+        & time{
+            font-size: .7vw;
+            margin: .5vh 0;
+        }
+        & h2{
+            font-size: 1.5vw;
+            margin: .3vh 0;
+            text-align: start;
+        }
+        & ul{
+            display: flex;
+            flex-direction: row;
+            gap: .5vw;
+            padding: 0;
+            width: min-content;
+            list-style: none;
+            border-radius: .2vw;
+            & li{
+                font-size: .7vw;
+                border: var(--textColor) .1vw solid;
+                border-radius: .7em;
+                padding: .2vw;
+                &:hover{
+                    cursor: pointer;
+                    border: var(--accent) .1vw solid;
+                    background-color: var(--accent);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/* Blogs */
+
+body:has(.blogs, .chsh){
+    background-color: hsl(0, 0%, 15%);
+    background-image: radial-gradient(ellipse farthest-side at right top, #5562F6 0%, #272727 130vh);;
+    & *:not(.menu){
+        transition: all var(--transitionShort);
+    }
+}
+.blogs .mainPageMenu, .chsh .mainPageMenu{
+    display: grid;
+    margin: 3vh 7vw;
+    grid-template-columns: 1fr 1fr;
+    color: var(--textColor);
+    & section{
+        flex-basis: 1;
+    }
+    & h1{
+        text-align: start;
+        font-size: 5vw;
+        margin: 0;
+        margin-top: 15vh;
+    }
+    & p{
+        font-size: 1.5vw;
+    }
+    & button:not(.clearButton){
+    background: radial-gradient(circle at 100% 100%, transparent 0, transparent 3px, transparent 3px) 0% 0%/7px 7px no-repeat,
+            radial-gradient(circle at 0 100%, transparent 0, transparent 3px, transparent 3px) 100% 0%/7px 7px no-repeat,
+            radial-gradient(circle at 100% 0, transparent 0, transparent 3px, transparent 3px) 0% 100%/7px 7px no-repeat,
+            radial-gradient(circle at 0 0, transparent 0, transparent 3px, transparent 3px) 100% 100%/7px 7px no-repeat,
+            linear-gradient(transparent, transparent) 50% 50%/calc(100% - 8px) calc(100% - 14px) no-repeat,
+            linear-gradient(transparent, transparent) 50% 50%/calc(100% - 14px) calc(100% - 8px) no-repeat,
+            linear-gradient(135deg, rgba(85,98,246,1) 0%, rgba(106,188,225,1) 100%);
+    border-radius: .2vw;
+    border: none;
+    box-sizing: content-box;
+    font-size: 1.7vw;
+    margin: 0;
+    padding: .3vw 1vw;
+    color: var(--textColor);
+    vertical-align: bottom;
+    &:hover{
+        cursor: pointer;
+        scale: 1.06;
+        animation: rotate .3s linear 3;
+        animation-delay: 200ms;
+    };
+    }
+    & div{
+        display: flex;
+        align-items: center;
+        gap: .5vw;
+        padding: .4vw;
+        background-color: var(--textColor);
+        width: min-content;
+        border-radius: .2vw;
+    };
+    & input{
+        vertical-align: bottom;
+        font-size: 1.5vw;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        padding: .4vw;
+        color: var(--bgColor);
+    }
+    & section:last-child{
+        display: flex;
+        align-items: center;
+        text-align: end;
+        justify-content: center;
+        & p{
+            width: 60%;
+            margin-left: auto;
+            font-size: 1vw;
+        }
+    }
+}
+
+
+
+
+
+
+
+.blogs .blogList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 3vh 7vw;
+    gap: 1vw;
+    row-gap: 5vh;
+    margin-top: 15vh;
+    color: var(--textColor);
+    & .blogSmall{
+        border: transparent .1vw solid;
+        display: flex;
+        flex-direction: column;
+        padding: .4vw;
+        &:hover{
+            border: var(--accent) .1vw solid;
+        }
+        & img{
+            width: 100%;
+            object-fit: contain;
+            box-sizing: border-box;
+        }
+        & time{
+            font-size: .7vw;
+            margin: .5vh 0;
+        }
+        & h2{
+            font-size: 1.5vw;
+            margin: .3vh 0;
+            text-align: start;
+        }
+        & ul{
+            display: flex;
+            flex-direction: row;
+            gap: .5vw;
+            padding: 0;
+            width: min-content;
+            list-style: none;
+            border-radius: .2vw;
+            & li{
+                font-size: .7vw;
+                border: var(--textColor) .1vw solid;
+                border-radius: .7em;
+                padding: .2vw;
+                &:hover{
+                    cursor: pointer;
+                    border: var(--accent) .1vw solid;
+                    background-color: var(--accent);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* cheatsheet */
+.chsh .mainPageMenu{
+    color: var(--textColor);
+    & button{
+        background-color: var(--accent);
+        border: none;
+        color: var(--textColor);
+        padding: .5vw 1vw;
+        font-size: 2vw;
+        width: max-content;
+        &:hover{
+            cursor: pointer;
+        }
+        &::after{
+            content: "→";
+            transition: all var(--transitionMedium);
+            margin-left: .5vw;
+        }
+        &:hover::after{
+            margin-left: 1.3vw;}
+    }
+}
+
+
+
+
+
+
+
+.chsh .cheatsheets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15vw;
+    color: var(--textColor);
+    & h2{
+        font-size: 3vw;
+    }
+    & ul{
+        list-style: none;
+        display: grid;
+        gap: 1vw;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 10vh;
+        & li{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            text-align: center;
+            height: 100%;
+            & img{
+                aspect-ratio: 1/1;
+                object-fit: contain;
+                margin: 0 auto;
+                width: 30%;
+            }
+            & h3{
+                margin: 1vh 0;
+                font-size: 1.2vw;
+            }
+            & p{
+                font-size: .8vw;
+            }
+            & div{
+                margin-top: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2vw;
+            }
+            & button{
+                color: var(--textColor);
+                font-size: .8vw;
+                background-color: transparent;
+                padding: .3vw;
+                border: var(--accent) .1vw solid;
+                &:hover{
+                    cursor: pointer;
+                    background-color: var(--accent);
+                }
+            }
+            & a{
+                color: var(--textColor);
+                font-size: .8vw;
+                &:hover{
+                    color: var(--accent);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+background: radial-gradient(circle at 100% 100%, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 0% 0%/7px 7px no-repeat,
+            radial-gradient(circle at 0 100%, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 100% 0%/7px 7px no-repeat,
+            radial-gradient(circle at 100% 0, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 0% 100%/7px 7px no-repeat,
+            radial-gradient(circle at 0 0, var(--bgColor) 0, var(--bgColor) 3px, transparent 3px) 100% 100%/7px 7px no-repeat,
+            linear-gradient(var(--bgColor), var(--bgColor)) 50% 50%/calc(100% - 8px) calc(100% - 14px) no-repeat,
+            linear-gradient(var(--bgColor), var(--bgColor)) 50% 50%/calc(100% - 14px) calc(100% - 8px) no-repeat,
+            linear-gradient(135deg, rgba(85,98,246,1) 0%, rgba(106,188,225,1) 100%);
+border-radius: .1vw;

@@ -1,0 +1,21 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/menu.ejs') %>
+    <h1><%= h1 %></h1>
+
+
+    <div class="computerListing">
+        <% items.forEach(item => { %>
+            <div class="computerContainer">
+                <img src="<%= item.imageLink %>" alt="">
+                <h3><%= item.title %></h3>
+                <p><%= item.description %></p>
+                <p>Save $<%= item.discountPrice %> / <%= item.discountPercentage %>%</p>
+                <data value="<%= item.price %>"><%= item.originalPrice %> -> $<%- item.price %></data>
+                <a href=""><button>Buy</button></a>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

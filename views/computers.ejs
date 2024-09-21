@@ -1,0 +1,25 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/menu.ejs') %>
+    <main>
+        <h1><%= h1 %></h1>
+        <section class="computerListing">
+            <% computers.forEach(computer => { %>
+                <div class="computerContainer">
+                    <img src="<%= computer.imageLink %>" alt="">
+                    <h3><%= computer.title %></h3>
+                    <p><%= computer.shortDescription %></p>
+                    <ul>
+                        <li>CPU: <%= computer.cpu %></li>
+                        <li>GPU: <%= computer.gpu1 %></li>
+                        <li>RAM: <%= computer.ram %> GB</li>
+                    </ul>
+                    <data value="<%= computer.price %>"><%= computer.price %></data>
+                    <a href="/pc/<%= computer._id %>"><button>Learn More</button></a>
+                </div>
+            <% }); %>
+        </section>
+    </main>
+</body>
+</html>

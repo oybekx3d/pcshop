@@ -1,0 +1,27 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/menu.ejs') %>
+    <div class="addNewPC">
+        <form action="/addItem/Deal" method="post">
+            <input type="text" placeholder="Title" name="title">
+            <input type="text" placeholder="link" name="link">
+            <input type="text" placeholder="Description" name="description">
+            <input type="number" placeholder="Price" name="price">
+            <input type="number" placeholder="originalPrice" name="originalPrice">
+            <button type="button" onclick="
+                let price = document.querySelector('input[name=price]').value;
+                let originalPrice = document.querySelector('input[name=originalPrice]').value;
+                let discountPrice = originalPrice - price;
+                let discountPercentage = Math.round((discountPrice / originalPrice) * 100);
+                document.querySelector('input[name=discountPrice]').value = discountPrice;
+                document.querySelector('input[name=discountPercentage]').value = discountPercentage;
+            ">Calculate Discount</button>
+            <input type="number" placeholder="discountPrice" name="discountPrice">
+            <input type="number" placeholder="discountPercentage" name="discountPercentage">
+            <input type="text" placeholder="imageLink" name="imageLink">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

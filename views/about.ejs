@@ -1,0 +1,92 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/menu.ejs') %>
+    <script>
+        function showArticle(articleNumber) {
+            const articles = document.querySelectorAll('.aboutArticle');
+            articles.forEach(article => article.style.display = 'none');
+            
+            const selectedArticle = document.getElementById(`article-${articleNumber}`);
+            selectedArticle.style.display = 'grid';
+
+            const header = document.getElementById('header');
+            switch (articleNumber) {
+                case 1:
+                    header.innerHTML = 'Meet Our Team';
+                    break;
+                case 2:
+                    header.innerHTML = 'Our Goals';
+                    break;
+                case 3:
+                    header.innerHTML = 'Other Projects';
+                    break;
+                case 4:
+                    header.innerHTML = 'F.A.Q.';
+                    break;
+            }
+        }
+        </script>
+    <main class="about">
+        <p>Meet out team, who are working together to make this website and our social media accounts work and keeping them active.</p>
+        <h1 id="header">Meet Our Team</h1>
+        <div class="aboutContainer">
+            <div class="aboutButtons">
+                <button onclick="showArticle(1)">Our Team</button>
+                <button onclick="showArticle(2)">Our Goals</button>
+                <button onclick="showArticle(3)">Other Projects</button>
+                <button onclick="showArticle(4)">F.A.Q.</button>
+            </div>
+
+
+            <div class="aboutArticles">
+                <div id="article-1" class="aboutArticle" style="display: grid;">
+                    <div>
+                        <img src="/imgs/perm_files/pc.webp" alt="">
+                        <h2>Oybek</h2>
+                        <p>CEO</p>
+                    </div>
+                    <div>
+                        <img src="/imgs/perm_files/pc.webp" alt="">
+                        <h2>Oybek</h2>
+                        <p>CEO</p>
+                    </div>
+                    <div>
+                        <img src="/imgs/perm_files/pc.webp" alt="">
+                        <h2>Oybek</h2>
+                        <p>CEO</p>
+                    </div>
+                    <div>
+                        <img src="/imgs/perm_files/pc.webp" alt="">
+                        <h2>Oybek</h2>
+                        <p>CEO</p>
+                    </div>
+                    <div>
+                        <img src="/imgs/perm_files/pc.webp" alt="">
+                        <h2>Oybek</h2>
+                        <p>CEO</p>
+                    </div>
+                </div>
+                <div id="article-2" class="aboutArticle" style="display: none;">
+                    <p>Our main goal is to help those that are new to PC building. We want to tech everybody how to properly assemble, maintain and store their computers. We will also be teaching you how to build your own PC, 
+                    <p>We are making a library for people who are interested in computer, whether they are newbie or Expert. We will be posting news and updates on our Blogs and social media. If you want to keep up to date, you can follow us on social media by clicking on <span style="font-style: italic;">Community</span> button in the Navigation Bar</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, consequatur nemo, architecto quos suscipit, dolorum delectus aspernatur reiciendis cupiditate minus quam esse harum voluptas nostrum voluptates expedita.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate quisquam reiciendis, dolores placeat autem eum fugiat aut eaque vitae minima perferendis ex soluta libero distinctio quas enim nostrum dolor delectus laudantium, unde iusto facere asperiores provident? Nisi deserunt earum libero sunt odit?</p>
+
+                </div>
+                <div id="article-3" class="aboutArticle" style="display: none;">
+                    <p>Some of our other projects are still in progress. They will be posted here.</p>
+                </div>
+                <div id="article-4" class="aboutArticle" style="display: none;">
+                    <ul>
+                        <li>Why free?</li>
+                        <li>I make money by showing ads and affiliate links which allows me to allocate most of my time into helping others</li>
+                        <li>Any shipping/purchase related questions</li>
+                        <li>I am NOT responsible for shipping, return, damages, warranty or purchases. the store you bought them from, eg. Amazon are responsible for the product. I only give you links and I do not own anything that is being sold.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/menu.ejs') %>
+    <main>
+        <h1><%= h1 %></h1>
+
+        <section class="computerListing">
+            <% switch (h1) {
+                case "Monitors":
+                    items.forEach(item => { %>
+                        <div class="computerContainer">
+                            <img src="<%= item.imageLink %>" alt="">
+                            <h3><%= item.title %></h3>
+                            <p><%= item.description %></p>
+                            <ul>
+                                <li>Resolution: <%= item.resolution %></li>
+                                <li>Refresh Rate: <%= item.refreshRate %>Hz</li>
+                                <li>Panel Type: <%= item.panelType %></li>
+                            </ul>
+                            <data value="<%= item.price %>"><%= item.price %></data>
+                            <a href="/monitor/<%= item._id %>"><button>Learn More</button></a>
+                        </div>
+                    <% });
+                    break;
+                case "Keyboards":
+                    items.forEach(item => { %>
+                        <div class="computerContainer">
+                            <img src="<%= item.imageLink %>" alt="">
+                            <h3><%= item.title %></h3>
+                            <p><%= item.description %></p>
+                            <ul>
+                                <li>mechanical or not: <%= item.mechanical %></li>
+                                <li>100% size/ keyCount: <%= item.keyCount %> </li>
+                                <li>switches/[hasRGB for non mechanical]: <%= item.switches %> / <%= item.hasRGB %></li>
+                            </ul>
+                            <data value="<%= item.price %>"><%= item.price %></data>
+                            <a href="/monitor/<%= item._id %>"><button>Learn More</button></a>
+                        </div>
+                    <% });
+                    break;
+                case "Mice":
+                    items.forEach(item => { %>
+                        <div class="computerContainer">
+                            <img src="<%= item.imageLink %>" alt="">
+                            <h3><%= item.title %></h3>
+                            <p><%= item.description %></p>
+                            <ul>
+                                <li>color: <%= item.color %></li>
+                                <li>connection Type: <%= item.connectionType %></li>
+                                <li>Button Count: <%= item.buttonCount %></li>
+                            </ul>
+                            <data value="<%= item.price %>"><%= item.price %></data>
+                            <a href="/monitor/<%= item._id %>"><button>Learn More</button></a>
+                        </div>
+                    <% });
+                    break;
+                case "Headsets":
+                    items.forEach(item => { %>
+                        <div class="computerContainer">
+                            <img src="<%= item.imageLink %>" alt="">
+                            <h3><%= item.title %></h3>
+                            <p><%= item.description %></p>
+                            <ul>
+                                <li>color: <%= item.color %></li>
+                                <li>connection Type: <%= item.connectionType %></li>
+                                <li>Microphone: <%= item.microphone %></li>
+                                <li>Noise cancellation: <%= item.noiseCancellation %></li>
+                            </ul>
+                            <data value="<%= item.price %>"><%= item.price %></data>
+                            <a href="/monitor/<%= item._id %>"><button>Learn More</button></a>
+                        </div>
+                    <% });
+                    break;
+                case "Storage":
+                    items.forEach(item => { %>
+                        <div class="computerContainer">
+                            <img src="<%= item.imageLink %>" alt="">
+                            <h3><%= item.title %></h3>
+                            <p><%= item.description %></p>
+                            <ul>
+                                <li>Capacity: <%= item.capacity %>GB</li>
+                                <li>Speed: <%= item.speed %>MB/s</li>
+                                <li>Interface: <%= item.interface %></li>
+                            </ul>
+                            <data value="<%= item.price %>"><%= item.price %></data>
+                            <a href="/monitor/<%= item._id %>"><button>Learn More</button></a>
+                        </div>
+                    <% });
+                    break;
+                case "External Storage":
+                    items.forEach(item => { %>
+                        <div class="computerContainer">
+                            <img src="<%= item.imageLink %>" alt="">
+                            <h3><%= item.title %></h3>
+                            <p><%= item.description %></p>
+                            <ul>
+                                <li>Capacity: <%= item.capacity %>GB</li>
+                                <li>Speed: <%= item.speed %>MB/s</li>
+                                <li>Interface: <%= item.interface %></li>
+                            </ul>
+                            <data value="<%= item.price %>"><%= item.price %></data>
+                            <a href="/monitor/<%= item._id %>"><button>Learn More</button></a>
+                        </div>
+                    <% });
+                    break;
+            } %>
+        </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

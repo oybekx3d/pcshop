@@ -1,0 +1,32 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/menu.ejs') %>
+    <div class="addNewPC">
+        <form action="/addItem/Keyboard" method="post">
+            <input type="text" placeholder="Title" name="title">
+            <input type="text" placeholder="image Link" name="imageLink">
+            <input type="text" placeholder="Description" name="description">
+            <input type="number" placeholder="Price" name="price">
+            <input type="text" placeholder="link" name="link">
+            <input type="text" placeholder="color" name="color">
+            <input type="text" placeholder="switches" name="switches">
+            <label>
+                <input type="radio" name="mechanical" value="1">
+                <span>Mechanical</span>
+                <input type="radio" name="mechanical" value="0">
+                <span>Not Mechanical</span>
+            </label>
+            <label>
+                <input type="radio" name="hasRGB" value="1">
+                <span>Has RGB</span>
+                <input type="radio" name="hasRGB" value="0">
+                <span>NO RGB</span>
+            </label>
+            <input type="text" placeholder="size" name="size">
+            <input type="text" placeholder="connection type" name="connectionType">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

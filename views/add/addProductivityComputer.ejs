@@ -1,0 +1,89 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/menu.ejs') %>
+    <div class="addNewPC">
+        <form action="/addItem/ProductivityComputer" method="post">
+            <input type="text" placeholder="title" name="title">
+            <input type="text" placeholder="imageLink" name="imageLink">
+            <input type="text" placeholder="description" name="description">
+            <input type="text" placeholder="Short Description" name="shortDescription">
+            <input type="number" placeholder="price" name="price">
+            <label>
+                <input type="radio" name="bluetooth" value="1">
+                <span>Has Bluetooth</span>
+                <input type="radio" name="bluetooth" value="0">
+                <span>NO Bluetooth</span>
+            </label>
+            <label>
+                <input type="radio" name="wifi" value="1">
+                <span>Has Wifi</span>
+                <input type="radio" name="wifi" value="0">
+                <span>NO Wifi</span>
+            </label>
+            <label>
+                <input type="radio" name="rgb" value="1">
+                <span>Has RGB</span>
+                <input type="radio" name="rgb" value="0">
+                <span>NO RGB</span>
+            </label>
+                <input type="text" placeholder="colorTheme" name="colorTheme">
+            <input type="text" placeholder="case" name="case">
+            <input type="text" placeholder="caseLink" name="caseLink">
+            <input type="text" placeholder="caseType" name="caseType">
+            <input type="text" placeholder="preInstalledFans" name="preInstalledFans">
+            <input type="text" placeholder="cpu" name="cpu">
+            <input type="text" placeholder="cpuLink" name="cpuLink">
+            <input type="number" placeholder="cpuCoreCount" name="cpuCoreCount">
+            <input type="text" placeholder="cpuBrand" name="cpuBrand">
+            <label>
+                <input type="radio" name="iGPU" value="1">
+                <span>Has iGPU</span>
+                <input type="radio" name="iGPU" value="0">
+                <span>NO iGPU</span>
+            </label>
+            <input type="text" placeholder="cpuCooler" name="cpuCooler">
+            <input type="text" placeholder="cpuCoolerLink" name="cpuCoolerLink">
+            <input type="text" placeholder="cpuCoolerType" name="cpuCoolerType">
+            <input type="number" placeholder="cpuCoolerLength" name="cpuCoolerLength">
+            <input type="text" placeholder="motherboard" name="motherboard">
+            <input type="text" placeholder="motherboardLink" name="motherboardLink">
+            <input type="text" placeholder="motherboardSize" name="motherboardSize">
+            <input type="text" placeholder="motherboardChipset" name="motherboardChipset">
+            <input type="text" placeholder="ram" name="ram">
+            <input type="text" placeholder="displayRamHowMuch" name="ramRepeatHowMany">
+            <input type="text" placeholder="ramLink" name="ramLink">
+            <input type="number" placeholder="ramSpeed" name="ramSpeed">
+            <input type="number" placeholder="ramCapacity" name="ramCapacity">
+            <input type="text" placeholder="ssd1" name="ssd1">
+            <input type="text" placeholder="ssd1Link" name="ssd1Link">
+            <input type="text" placeholder="ssd2" name="ssd2">
+            <input type="text" placeholder="ssd2Link" name="ssd2Link">
+            <input type="text" placeholder="ssd3" name="ssd3">
+            <input type="text" placeholder="ssd3Link" name="ssd3Link">
+            <input type="text" placeholder="ssd4" name="ssd4">
+            <input type="text" placeholder="ssd4Link" name="ssd4Link">
+            <input type="number" placeholder="ssdCapacity" name="ssdCapacity">
+            <input type="text" placeholder="gpu1" name="gpu1">
+            <input type="text" placeholder="gpu1Link" name="gpu1Link">
+            <input type="number" placeholder="gpu1VramCapacity" name="gpu1VramCapacity">
+            <input type="text" placeholder="GPU1Brand" name="gpu1Brand">
+            <input type="text" placeholder="gpu2" name="gpu2">
+            <input type="text" placeholder="gpu2Link" name="gpu2Link">
+            <input type="number" placeholder="gpu2VramCapacity" name="gpu2VramCapacity">
+            <input type="text" placeholder="GPU2Brand" name="gpu2Brand">
+            <input type="text" placeholder="gpu3" name="gpu3">
+            <input type="text" placeholder="gpu3Link" name="gpu3Link">
+            <input type="number" placeholder="gpu3VramCapacity" name="gpu3VramCapacity">
+            <input type="text" placeholder="GPU3Brand" name="gpu3Brand">
+            <input type="text" placeholder="powerSupply" name="powerSupply">
+            <input type="text" placeholder="powerSupplyLink" name="powerSupplyLink">
+            <input type="number" placeholder="powerSupplyWatts" name="powerSupplyWatts">
+            <input type="text" placeholder="powerSupplyEfficiency" name="powerSupplyEfficiency">
+            <input type="text" placeholder="powerSupplyTier" name="powerSupplyTier">
+
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

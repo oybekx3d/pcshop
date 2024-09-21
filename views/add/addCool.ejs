@@ -1,0 +1,16 @@
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/menu.ejs") %>
+    <div class="addNewPC">
+        <form action="/addItem/Cool" method="post">
+            <input type="text" placeholder="Title" name="title">
+            <input type="text" placeholder="link" name="link">
+            <input type="text" placeholder="Description" name="description">
+            <input type="number" placeholder="Price" name="price">
+            <input type="text" placeholder="image Link" name="imageLink">
+            <button type="submit">Add</button>
+        </form>
+    </div>    
+</body>
+</html> 

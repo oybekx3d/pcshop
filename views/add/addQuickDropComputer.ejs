@@ -1,0 +1,34 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/menu.ejs') %>
+    <div class="addNewPC">
+        <form action="/addItem/QuickDropComputer" method="post">
+            <input type="text" placeholder="title" name="title">
+            <input type="text" placeholder="imageLink" name="imageLink">
+            <input type="text" placeholder="description" name="description">
+            <input type="text" placeholder="Short Description" name="shortDescription">
+            <input type="text" placeholder="price" name="price">
+            <input type="text" placeholder="cpu" name="cpu">
+            <input type="text" placeholder="cpuLink" name="cpuLink">
+            <input type="text" placeholder="cooler" name="cooler">
+            <input type="text" placeholder="coolerLink" name="coolerLink">
+            <input type="text" placeholder="mobo" name="mobo">
+            <input type="text" placeholder="moboLink" name="moboLink">
+            <input type="text" placeholder="ram" name="ram">
+            <input type="text" placeholder="ramLink" name="ramLink">
+            <input type="text" placeholder="ssd1" name="ssd1">
+            <input type="text" placeholder="ssd1Link" name="ssd1Link">
+            <input type="text" placeholder="ssd2" name="ssd2">
+            <input type="text" placeholder="ssd2Link" name="ssd2Link">
+            <input type="text" placeholder="gpu" name="gpu">
+            <input type="text" placeholder="gpuLink" name="gpuLink">
+            <input type="text" placeholder="case" name="case">
+            <input type="text" placeholder="caseLink" name="caseLink">
+            <input type="text" placeholder="psu" name="psu">
+            <input type="text" placeholder="psuLink" name="psuLink">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>
